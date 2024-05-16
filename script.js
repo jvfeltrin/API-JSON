@@ -28,3 +28,15 @@ document.getElementById('search-form').addEventListener('submit', function(event
 
     let url = '';
 
+    if (rota === 'rota1') {
+        url = `https://servicodados.ibge.gov.br/api/v2/censos/nomes/${nome}`;
+    } else if (rota === 'rota2') {
+        url = `https://servicodados.ibge.gov.br/api/v2/censos/nomes/${nome}?localidade=${localidade}`;
+    } else if (rota === 'rota3') {
+        url = `https://servicodados.ibge.gov.br/api/v2/censos/nomes/${nome}?groupBy=UF`;
+    } else if (rota === 'rota4') {
+        url = `https://servicodados.ibge.gov.br/api/v1/paises/${pais}`;
+    }
+
+    
+});
